@@ -6,20 +6,20 @@ part of 'document.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$DocumentImpl _$$DocumentImplFromJson(Map<String, dynamic> json) =>
-    _$DocumentImpl(
-      contentList: (json['content'] as List<dynamic>?)
-          ?.map((e) => Content.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      nodeType: $enumDecodeNullable(
-          _$ContentfulContentNodeTypeEnumMap, json['nodeType']),
-    );
+_Document _$DocumentFromJson(Map<String, dynamic> json) => _Document(
+  contentList: (json['content'] as List<dynamic>?)
+      ?.map((e) => Content.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  nodeType: $enumDecodeNullable(
+    _$ContentfulContentNodeTypeEnumMap,
+    json['nodeType'],
+  ),
+);
 
-Map<String, dynamic> _$$DocumentImplToJson(_$DocumentImpl instance) =>
-    <String, dynamic>{
-      'content': instance.contentList,
-      'nodeType': _$ContentfulContentNodeTypeEnumMap[instance.nodeType],
-    };
+Map<String, dynamic> _$DocumentToJson(_Document instance) => <String, dynamic>{
+  'content': instance.contentList,
+  'nodeType': _$ContentfulContentNodeTypeEnumMap[instance.nodeType],
+};
 
 const _$ContentfulContentNodeTypeEnumMap = {
   ContentfulContentNodeType.unorderedList: 'unordered-list',

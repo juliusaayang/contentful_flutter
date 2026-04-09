@@ -6,12 +6,9 @@ part of 'metadata.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$MetadataImpl _$$MetadataImplFromJson(Map<String, dynamic> json) =>
-    _$MetadataImpl(
-      tags: json['tags'] as List<dynamic>?,
-    );
+_Metadata _$MetadataFromJson(Map<String, dynamic> json) =>
+    _Metadata(tags: json['tags'] as List<dynamic>?);
 
-Map<String, dynamic> _$$MetadataImplToJson(_$MetadataImpl instance) =>
-    <String, dynamic>{
-      'tags': instance.tags,
-    };
+Map<String, dynamic> _$MetadataToJson(_Metadata instance) => <String, dynamic>{
+  'tags': instance.tags,
+};

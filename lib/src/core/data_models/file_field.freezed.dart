@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,217 +9,302 @@ part of 'file_field.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-FileField _$FileFieldFromJson(Map<String, dynamic> json) {
-  return _FileField.fromJson(json);
-}
 
 /// @nodoc
 mixin _$FileField {
-  String? get url => throw _privateConstructorUsedError;
-  Details? get details => throw _privateConstructorUsedError;
-  String? get fileName => throw _privateConstructorUsedError;
-  String? get contentType => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $FileFieldCopyWith<FileField> get copyWith =>
-      throw _privateConstructorUsedError;
+ String? get url; Details? get details; String? get fileName; String? get contentType;
+/// Create a copy of FileField
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$FileFieldCopyWith<FileField> get copyWith => _$FileFieldCopyWithImpl<FileField>(this as FileField, _$identity);
+
+  /// Serializes this FileField to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is FileField&&(identical(other.url, url) || other.url == url)&&(identical(other.details, details) || other.details == details)&&(identical(other.fileName, fileName) || other.fileName == fileName)&&(identical(other.contentType, contentType) || other.contentType == contentType));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,url,details,fileName,contentType);
+
+@override
+String toString() {
+  return 'FileField(url: $url, details: $details, fileName: $fileName, contentType: $contentType)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $FileFieldCopyWith<$Res> {
-  factory $FileFieldCopyWith(FileField value, $Res Function(FileField) then) =
-      _$FileFieldCopyWithImpl<$Res, FileField>;
-  @useResult
-  $Res call(
-      {String? url, Details? details, String? fileName, String? contentType});
+abstract mixin class $FileFieldCopyWith<$Res>  {
+  factory $FileFieldCopyWith(FileField value, $Res Function(FileField) _then) = _$FileFieldCopyWithImpl;
+@useResult
+$Res call({
+ String? url, Details? details, String? fileName, String? contentType
+});
 
-  $DetailsCopyWith<$Res>? get details;
+
+$DetailsCopyWith<$Res>? get details;
+
 }
-
 /// @nodoc
-class _$FileFieldCopyWithImpl<$Res, $Val extends FileField>
+class _$FileFieldCopyWithImpl<$Res>
     implements $FileFieldCopyWith<$Res> {
-  _$FileFieldCopyWithImpl(this._value, this._then);
+  _$FileFieldCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final FileField _self;
+  final $Res Function(FileField) _then;
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? url = freezed,
-    Object? details = freezed,
-    Object? fileName = freezed,
-    Object? contentType = freezed,
-  }) {
-    return _then(_value.copyWith(
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      details: freezed == details
-          ? _value.details
-          : details // ignore: cast_nullable_to_non_nullable
-              as Details?,
-      fileName: freezed == fileName
-          ? _value.fileName
-          : fileName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      contentType: freezed == contentType
-          ? _value.contentType
-          : contentType // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+/// Create a copy of FileField
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? url = freezed,Object? details = freezed,Object? fileName = freezed,Object? contentType = freezed,}) {
+  return _then(_self.copyWith(
+url: freezed == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
+as String?,details: freezed == details ? _self.details : details // ignore: cast_nullable_to_non_nullable
+as Details?,fileName: freezed == fileName ? _self.fileName : fileName // ignore: cast_nullable_to_non_nullable
+as String?,contentType: freezed == contentType ? _self.contentType : contentType // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
+}
+/// Create a copy of FileField
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$DetailsCopyWith<$Res>? get details {
+    if (_self.details == null) {
+    return null;
   }
 
-  @override
-  @pragma('vm:prefer-inline')
-  $DetailsCopyWith<$Res>? get details {
-    if (_value.details == null) {
-      return null;
-    }
-
-    return $DetailsCopyWith<$Res>(_value.details!, (value) {
-      return _then(_value.copyWith(details: value) as $Val);
-    });
-  }
+  return $DetailsCopyWith<$Res>(_self.details!, (value) {
+    return _then(_self.copyWith(details: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$FileFieldImplCopyWith<$Res>
-    implements $FileFieldCopyWith<$Res> {
-  factory _$$FileFieldImplCopyWith(
-          _$FileFieldImpl value, $Res Function(_$FileFieldImpl) then) =
-      __$$FileFieldImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? url, Details? details, String? fileName, String? contentType});
 
-  @override
-  $DetailsCopyWith<$Res>? get details;
+/// Adds pattern-matching-related methods to [FileField].
+extension FileFieldPatterns on FileField {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _FileField value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _FileField() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _FileField value)  $default,){
+final _that = this;
+switch (_that) {
+case _FileField():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _FileField value)?  $default,){
+final _that = this;
+switch (_that) {
+case _FileField() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? url,  Details? details,  String? fileName,  String? contentType)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _FileField() when $default != null:
+return $default(_that.url,_that.details,_that.fileName,_that.contentType);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? url,  Details? details,  String? fileName,  String? contentType)  $default,) {final _that = this;
+switch (_that) {
+case _FileField():
+return $default(_that.url,_that.details,_that.fileName,_that.contentType);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? url,  Details? details,  String? fileName,  String? contentType)?  $default,) {final _that = this;
+switch (_that) {
+case _FileField() when $default != null:
+return $default(_that.url,_that.details,_that.fileName,_that.contentType);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$FileFieldImplCopyWithImpl<$Res>
-    extends _$FileFieldCopyWithImpl<$Res, _$FileFieldImpl>
-    implements _$$FileFieldImplCopyWith<$Res> {
-  __$$FileFieldImplCopyWithImpl(
-      _$FileFieldImpl _value, $Res Function(_$FileFieldImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? url = freezed,
-    Object? details = freezed,
-    Object? fileName = freezed,
-    Object? contentType = freezed,
-  }) {
-    return _then(_$FileFieldImpl(
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      details: freezed == details
-          ? _value.details
-          : details // ignore: cast_nullable_to_non_nullable
-              as Details?,
-      fileName: freezed == fileName
-          ? _value.fileName
-          : fileName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      contentType: freezed == contentType
-          ? _value.contentType
-          : contentType // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$FileFieldImpl implements _FileField {
-  const _$FileFieldImpl(
-      {this.url, this.details, this.fileName, this.contentType});
 
-  factory _$FileFieldImpl.fromJson(Map<String, dynamic> json) =>
-      _$$FileFieldImplFromJson(json);
+class _FileField implements FileField {
+  const _FileField({this.url, this.details, this.fileName, this.contentType});
+  factory _FileField.fromJson(Map<String, dynamic> json) => _$FileFieldFromJson(json);
 
-  @override
-  final String? url;
-  @override
-  final Details? details;
-  @override
-  final String? fileName;
-  @override
-  final String? contentType;
+@override final  String? url;
+@override final  Details? details;
+@override final  String? fileName;
+@override final  String? contentType;
 
-  @override
-  String toString() {
-    return 'FileField(url: $url, details: $details, fileName: $fileName, contentType: $contentType)';
-  }
+/// Create a copy of FileField
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$FileFieldCopyWith<_FileField> get copyWith => __$FileFieldCopyWithImpl<_FileField>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FileFieldImpl &&
-            (identical(other.url, url) || other.url == url) &&
-            (identical(other.details, details) || other.details == details) &&
-            (identical(other.fileName, fileName) ||
-                other.fileName == fileName) &&
-            (identical(other.contentType, contentType) ||
-                other.contentType == contentType));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, url, details, fileName, contentType);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FileFieldImplCopyWith<_$FileFieldImpl> get copyWith =>
-      __$$FileFieldImplCopyWithImpl<_$FileFieldImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$FileFieldImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$FileFieldToJson(this, );
 }
 
-abstract class _FileField implements FileField {
-  const factory _FileField(
-      {final String? url,
-      final Details? details,
-      final String? fileName,
-      final String? contentType}) = _$FileFieldImpl;
-
-  factory _FileField.fromJson(Map<String, dynamic> json) =
-      _$FileFieldImpl.fromJson;
-
-  @override
-  String? get url;
-  @override
-  Details? get details;
-  @override
-  String? get fileName;
-  @override
-  String? get contentType;
-  @override
-  @JsonKey(ignore: true)
-  _$$FileFieldImplCopyWith<_$FileFieldImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FileField&&(identical(other.url, url) || other.url == url)&&(identical(other.details, details) || other.details == details)&&(identical(other.fileName, fileName) || other.fileName == fileName)&&(identical(other.contentType, contentType) || other.contentType == contentType));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,url,details,fileName,contentType);
+
+@override
+String toString() {
+  return 'FileField(url: $url, details: $details, fileName: $fileName, contentType: $contentType)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$FileFieldCopyWith<$Res> implements $FileFieldCopyWith<$Res> {
+  factory _$FileFieldCopyWith(_FileField value, $Res Function(_FileField) _then) = __$FileFieldCopyWithImpl;
+@override @useResult
+$Res call({
+ String? url, Details? details, String? fileName, String? contentType
+});
+
+
+@override $DetailsCopyWith<$Res>? get details;
+
+}
+/// @nodoc
+class __$FileFieldCopyWithImpl<$Res>
+    implements _$FileFieldCopyWith<$Res> {
+  __$FileFieldCopyWithImpl(this._self, this._then);
+
+  final _FileField _self;
+  final $Res Function(_FileField) _then;
+
+/// Create a copy of FileField
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? url = freezed,Object? details = freezed,Object? fileName = freezed,Object? contentType = freezed,}) {
+  return _then(_FileField(
+url: freezed == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
+as String?,details: freezed == details ? _self.details : details // ignore: cast_nullable_to_non_nullable
+as Details?,fileName: freezed == fileName ? _self.fileName : fileName // ignore: cast_nullable_to_non_nullable
+as String?,contentType: freezed == contentType ? _self.contentType : contentType // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
+}
+
+/// Create a copy of FileField
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$DetailsCopyWith<$Res>? get details {
+    if (_self.details == null) {
+    return null;
+  }
+
+  return $DetailsCopyWith<$Res>(_self.details!, (value) {
+    return _then(_self.copyWith(details: value));
+  });
+}
+}
+
+// dart format on

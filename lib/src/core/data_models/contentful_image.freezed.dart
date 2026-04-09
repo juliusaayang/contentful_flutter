@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,161 +9,272 @@ part of 'contentful_image.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-ContentfulImage _$ContentfulImageFromJson(Map<String, dynamic> json) {
-  return _ContentfulImage.fromJson(json);
-}
 
 /// @nodoc
 mixin _$ContentfulImage {
-  int? get width => throw _privateConstructorUsedError;
-  int? get height => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $ContentfulImageCopyWith<ContentfulImage> get copyWith =>
-      throw _privateConstructorUsedError;
+ int? get width; int? get height;
+/// Create a copy of ContentfulImage
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ContentfulImageCopyWith<ContentfulImage> get copyWith => _$ContentfulImageCopyWithImpl<ContentfulImage>(this as ContentfulImage, _$identity);
+
+  /// Serializes this ContentfulImage to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ContentfulImage&&(identical(other.width, width) || other.width == width)&&(identical(other.height, height) || other.height == height));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,width,height);
+
+@override
+String toString() {
+  return 'ContentfulImage(width: $width, height: $height)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $ContentfulImageCopyWith<$Res> {
-  factory $ContentfulImageCopyWith(
-          ContentfulImage value, $Res Function(ContentfulImage) then) =
-      _$ContentfulImageCopyWithImpl<$Res, ContentfulImage>;
-  @useResult
-  $Res call({int? width, int? height});
-}
+abstract mixin class $ContentfulImageCopyWith<$Res>  {
+  factory $ContentfulImageCopyWith(ContentfulImage value, $Res Function(ContentfulImage) _then) = _$ContentfulImageCopyWithImpl;
+@useResult
+$Res call({
+ int? width, int? height
+});
 
+
+
+
+}
 /// @nodoc
-class _$ContentfulImageCopyWithImpl<$Res, $Val extends ContentfulImage>
+class _$ContentfulImageCopyWithImpl<$Res>
     implements $ContentfulImageCopyWith<$Res> {
-  _$ContentfulImageCopyWithImpl(this._value, this._then);
+  _$ContentfulImageCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final ContentfulImage _self;
+  final $Res Function(ContentfulImage) _then;
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? width = freezed,
-    Object? height = freezed,
-  }) {
-    return _then(_value.copyWith(
-      width: freezed == width
-          ? _value.width
-          : width // ignore: cast_nullable_to_non_nullable
-              as int?,
-      height: freezed == height
-          ? _value.height
-          : height // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
-  }
+/// Create a copy of ContentfulImage
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? width = freezed,Object? height = freezed,}) {
+  return _then(_self.copyWith(
+width: freezed == width ? _self.width : width // ignore: cast_nullable_to_non_nullable
+as int?,height: freezed == height ? _self.height : height // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$ContentfulImageImplCopyWith<$Res>
-    implements $ContentfulImageCopyWith<$Res> {
-  factory _$$ContentfulImageImplCopyWith(_$ContentfulImageImpl value,
-          $Res Function(_$ContentfulImageImpl) then) =
-      __$$ContentfulImageImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int? width, int? height});
 }
 
-/// @nodoc
-class __$$ContentfulImageImplCopyWithImpl<$Res>
-    extends _$ContentfulImageCopyWithImpl<$Res, _$ContentfulImageImpl>
-    implements _$$ContentfulImageImplCopyWith<$Res> {
-  __$$ContentfulImageImplCopyWithImpl(
-      _$ContentfulImageImpl _value, $Res Function(_$ContentfulImageImpl) _then)
-      : super(_value, _then);
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? width = freezed,
-    Object? height = freezed,
-  }) {
-    return _then(_$ContentfulImageImpl(
-      width: freezed == width
-          ? _value.width
-          : width // ignore: cast_nullable_to_non_nullable
-              as int?,
-      height: freezed == height
-          ? _value.height
-          : height // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
-  }
+/// Adds pattern-matching-related methods to [ContentfulImage].
+extension ContentfulImagePatterns on ContentfulImage {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ContentfulImage value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _ContentfulImage() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ContentfulImage value)  $default,){
+final _that = this;
+switch (_that) {
+case _ContentfulImage():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ContentfulImage value)?  $default,){
+final _that = this;
+switch (_that) {
+case _ContentfulImage() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? width,  int? height)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _ContentfulImage() when $default != null:
+return $default(_that.width,_that.height);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? width,  int? height)  $default,) {final _that = this;
+switch (_that) {
+case _ContentfulImage():
+return $default(_that.width,_that.height);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? width,  int? height)?  $default,) {final _that = this;
+switch (_that) {
+case _ContentfulImage() when $default != null:
+return $default(_that.width,_that.height);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ContentfulImageImpl implements _ContentfulImage {
-  const _$ContentfulImageImpl({this.width, this.height});
 
-  factory _$ContentfulImageImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ContentfulImageImplFromJson(json);
+class _ContentfulImage implements ContentfulImage {
+  const _ContentfulImage({this.width, this.height});
+  factory _ContentfulImage.fromJson(Map<String, dynamic> json) => _$ContentfulImageFromJson(json);
 
-  @override
-  final int? width;
-  @override
-  final int? height;
+@override final  int? width;
+@override final  int? height;
 
-  @override
-  String toString() {
-    return 'ContentfulImage(width: $width, height: $height)';
-  }
+/// Create a copy of ContentfulImage
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ContentfulImageCopyWith<_ContentfulImage> get copyWith => __$ContentfulImageCopyWithImpl<_ContentfulImage>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ContentfulImageImpl &&
-            (identical(other.width, width) || other.width == width) &&
-            (identical(other.height, height) || other.height == height));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, width, height);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ContentfulImageImplCopyWith<_$ContentfulImageImpl> get copyWith =>
-      __$$ContentfulImageImplCopyWithImpl<_$ContentfulImageImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$ContentfulImageImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$ContentfulImageToJson(this, );
 }
 
-abstract class _ContentfulImage implements ContentfulImage {
-  const factory _ContentfulImage({final int? width, final int? height}) =
-      _$ContentfulImageImpl;
-
-  factory _ContentfulImage.fromJson(Map<String, dynamic> json) =
-      _$ContentfulImageImpl.fromJson;
-
-  @override
-  int? get width;
-  @override
-  int? get height;
-  @override
-  @JsonKey(ignore: true)
-  _$$ContentfulImageImplCopyWith<_$ContentfulImageImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ContentfulImage&&(identical(other.width, width) || other.width == width)&&(identical(other.height, height) || other.height == height));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,width,height);
+
+@override
+String toString() {
+  return 'ContentfulImage(width: $width, height: $height)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$ContentfulImageCopyWith<$Res> implements $ContentfulImageCopyWith<$Res> {
+  factory _$ContentfulImageCopyWith(_ContentfulImage value, $Res Function(_ContentfulImage) _then) = __$ContentfulImageCopyWithImpl;
+@override @useResult
+$Res call({
+ int? width, int? height
+});
+
+
+
+
+}
+/// @nodoc
+class __$ContentfulImageCopyWithImpl<$Res>
+    implements _$ContentfulImageCopyWith<$Res> {
+  __$ContentfulImageCopyWithImpl(this._self, this._then);
+
+  final _ContentfulImage _self;
+  final $Res Function(_ContentfulImage) _then;
+
+/// Create a copy of ContentfulImage
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? width = freezed,Object? height = freezed,}) {
+  return _then(_ContentfulImage(
+width: freezed == width ? _self.width : width // ignore: cast_nullable_to_non_nullable
+as int?,height: freezed == height ? _self.height : height // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
+}
+
+
+}
+
+// dart format on

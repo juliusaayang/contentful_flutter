@@ -7,35 +7,35 @@ repository: https://github.com/hackberrybay/contentful_flutter
 homepage: https://hackberry.se
 
 environment:
-  sdk: ">=2.19.0 <4.0.0"
+  sdk: ">=3.3.0 <4.0.0"
 
 dependency_overrides: 
-  collection: ^1.17.2
+  collection: ^1.19.1
 
 dependencies:
   flutter:
     sdk: flutter
   # ... Code generation ...
-  freezed_annotation: ^2.4.1
-  json_annotation: ^4.8.1
+  freezed_annotation: ^3.1.0
+  json_annotation: ^4.11.0
   # ... Network ...
-  http: ^1.1.0
+  http: ^1.6.0
   retry: ^3.1.2
-  fpdart: ^1.1.0 # Functional programming to use the Either<> type
-  collection: ^1.18.0
-  logger: ^2.0.2+1
+  fpdart: ^1.2.0 # Functional programming to use the Either<> type
+  collection: ^1.19.1
+  logger: ^2.7.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  mocktail: ^0.3.0
-  very_good_analysis: ^4.0.0
+  mocktail: ^1.0.4
+  very_good_analysis: ^10.2.0
   # ... Code generation ...
-  freezed: ^2.4.5
-  json_serializable: ^6.7.1
-  build_runner: ^2.4.6
+  freezed: ^3.2.5
+  json_serializable: ^6.9.0
+  build_runner: ^2.13.0
   # ... Linting ...
-  lints: ^3.0.0
+  lints: ^6.1.0
 
 topics:
   - contentful

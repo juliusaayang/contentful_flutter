@@ -6,15 +6,14 @@ part of 'data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$DataImpl _$$DataImplFromJson(Map<String, dynamic> json) => _$DataImpl(
-      target: json['target'] == null
-          ? null
-          : Target.fromJson(json['target'] as Map<String, dynamic>),
-      uri: json['uri'] as String?,
-    );
+_Data _$DataFromJson(Map<String, dynamic> json) => _Data(
+  target: json['target'] == null
+      ? null
+      : Target.fromJson(json['target'] as Map<String, dynamic>),
+  uri: json['uri'] as String?,
+);
 
-Map<String, dynamic> _$$DataImplToJson(_$DataImpl instance) =>
-    <String, dynamic>{
-      'target': instance.target,
-      'uri': instance.uri,
-    };
+Map<String, dynamic> _$DataToJson(_Data instance) => <String, dynamic>{
+  'target': instance.target,
+  'uri': instance.uri,
+};
