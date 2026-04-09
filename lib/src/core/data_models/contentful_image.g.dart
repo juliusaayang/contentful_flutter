@@ -13,4 +13,7 @@ _ContentfulImage _$ContentfulImageFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ContentfulImageToJson(_ContentfulImage instance) =>
-    <String, dynamic>{'width': instance.width, 'height': instance.height};
+    <String, dynamic>{
+      'width': instance.width,
+      'height': instance.height,
+    };

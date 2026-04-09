@@ -12,7 +12,7 @@ part 'contentful_delivery_data_model.g.dart';
 /// It also contains the [items] and [includes] that are returned from the API.
 /// The [items] are the entries that are returned from the API.
 /// The [includes] are the assets and linked entries that are returned from the API.
-class ContentfulDeliveryDataModel<T> with _$ContentfulDeliveryDataModel<T> {
+abstract class ContentfulDeliveryDataModel<T> with _$ContentfulDeliveryDataModel<T> {
   /// [ContentfulDeliveryDataModel] is the base model for the contentful delivery API
   /// returned from the API.
   /// It contains the [sys] information, the [total] number of items, the [skip] and [limit] values.

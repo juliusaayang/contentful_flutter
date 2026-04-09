@@ -12,4 +12,6 @@ _ExampleDataModel _$ExampleDataModelFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ExampleDataModelToJson(_ExampleDataModel instance) =>
-    <String, dynamic>{'body': instance.body};
+    <String, dynamic>{
+      'body': instance.body,
+    };

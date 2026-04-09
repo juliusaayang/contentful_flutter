@@ -12,7 +12,9 @@ _ContentfulTextMark _$ContentfulTextMarkFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ContentfulTextMarkToJson(_ContentfulTextMark instance) =>
-    <String, dynamic>{'type': _$ContentfulTextMarksEnumEnumMap[instance.type]};
+    <String, dynamic>{
+      'type': _$ContentfulTextMarksEnumEnumMap[instance.type],
+    };
 
 const _$ContentfulTextMarksEnumEnumMap = {
   ContentfulTextMarksEnum.bold: 'bold',

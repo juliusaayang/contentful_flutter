@@ -14,272 +14,307 @@ T _$identity<T>(T value) => value;
 
 /// @nodoc
 mixin _$Metadata {
+  List<dynamic>? get tags;
 
- List<dynamic>? get tags;
-/// Create a copy of Metadata
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$MetadataCopyWith<Metadata> get copyWith => _$MetadataCopyWithImpl<Metadata>(this as Metadata, _$identity);
+  /// Create a copy of Metadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $MetadataCopyWith<Metadata> get copyWith =>
+      _$MetadataCopyWithImpl<Metadata>(this as Metadata, _$identity);
 
   /// Serializes this Metadata to a JSON map.
   Map<String, dynamic> toJson();
 
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Metadata &&
+            const DeepCollectionEquality().equals(other.tags, tags));
+  }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Metadata&&const DeepCollectionEquality().equals(other.tags, tags));
-}
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(tags));
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(tags));
-
-@override
-String toString() {
-  return 'Metadata(tags: $tags)';
-}
-
-
+  @override
+  String toString() {
+    return 'Metadata(tags: $tags)';
+  }
 }
 
 /// @nodoc
-abstract mixin class $MetadataCopyWith<$Res>  {
-  factory $MetadataCopyWith(Metadata value, $Res Function(Metadata) _then) = _$MetadataCopyWithImpl;
-@useResult
-$Res call({
- List<dynamic>? tags
-});
-
-
-
-
+abstract mixin class $MetadataCopyWith<$Res> {
+  factory $MetadataCopyWith(Metadata value, $Res Function(Metadata) _then) =
+      _$MetadataCopyWithImpl;
+  @useResult
+  $Res call({List<dynamic>? tags});
 }
+
 /// @nodoc
-class _$MetadataCopyWithImpl<$Res>
-    implements $MetadataCopyWith<$Res> {
+class _$MetadataCopyWithImpl<$Res> implements $MetadataCopyWith<$Res> {
   _$MetadataCopyWithImpl(this._self, this._then);
 
   final Metadata _self;
   final $Res Function(Metadata) _then;
 
-/// Create a copy of Metadata
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? tags = freezed,}) {
-  return _then(_self.copyWith(
-tags: freezed == tags ? _self.tags : tags // ignore: cast_nullable_to_non_nullable
-as List<dynamic>?,
-  ));
+  /// Create a copy of Metadata
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? tags = freezed,
+  }) {
+    return _then(_self.copyWith(
+      tags: freezed == tags
+          ? _self.tags
+          : tags // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
+    ));
+  }
 }
-
-}
-
 
 /// Adds pattern-matching-related methods to [Metadata].
 extension MetadataPatterns on Metadata {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Metadata value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _Metadata() when $default != null:
-return $default(_that);case _:
-  return orElse();
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Metadata value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Metadata() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
 
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Metadata value)  $default,){
-final _that = this;
-switch (_that) {
-case _Metadata():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_Metadata value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Metadata():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
 
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Metadata value)?  $default,){
-final _that = this;
-switch (_that) {
-case _Metadata() when $default != null:
-return $default(_that);case _:
-  return null;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_Metadata value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Metadata() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
 
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<dynamic>? tags)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _Metadata() when $default != null:
-return $default(_that.tags);case _:
-  return orElse();
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(List<dynamic>? tags)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Metadata() when $default != null:
+        return $default(_that.tags);
+      case _:
+        return orElse();
+    }
+  }
 
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<dynamic>? tags)  $default,) {final _that = this;
-switch (_that) {
-case _Metadata():
-return $default(_that.tags);case _:
-  throw StateError('Unexpected subclass');
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(List<dynamic>? tags) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Metadata():
+        return $default(_that.tags);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
 
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<dynamic>? tags)?  $default,) {final _that = this;
-switch (_that) {
-case _Metadata() when $default != null:
-return $default(_that.tags);case _:
-  return null;
-
-}
-}
-
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(List<dynamic>? tags)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Metadata() when $default != null:
+        return $default(_that.tags);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
-
 class _Metadata implements Metadata {
-  const _Metadata({final  List<dynamic>? tags}): _tags = tags;
-  factory _Metadata.fromJson(Map<String, dynamic> json) => _$MetadataFromJson(json);
+  const _Metadata({final List<dynamic>? tags}) : _tags = tags;
+  factory _Metadata.fromJson(Map<String, dynamic> json) =>
+      _$MetadataFromJson(json);
 
- final  List<dynamic>? _tags;
-@override List<dynamic>? get tags {
-  final value = _tags;
-  if (value == null) return null;
-  if (_tags is EqualUnmodifiableListView) return _tags;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
+  final List<dynamic>? _tags;
+  @override
+  List<dynamic>? get tags {
+    final value = _tags;
+    if (value == null) return null;
+    if (_tags is EqualUnmodifiableListView) return _tags;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
+  /// Create a copy of Metadata
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$MetadataCopyWith<_Metadata> get copyWith =>
+      __$MetadataCopyWithImpl<_Metadata>(this, _$identity);
 
-/// Create a copy of Metadata
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$MetadataCopyWith<_Metadata> get copyWith => __$MetadataCopyWithImpl<_Metadata>(this, _$identity);
+  @override
+  Map<String, dynamic> toJson() {
+    return _$MetadataToJson(
+      this,
+    );
+  }
 
-@override
-Map<String, dynamic> toJson() {
-  return _$MetadataToJson(this, );
-}
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _Metadata &&
+            const DeepCollectionEquality().equals(other._tags, _tags));
+  }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Metadata&&const DeepCollectionEquality().equals(other._tags, _tags));
-}
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_tags));
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_tags));
-
-@override
-String toString() {
-  return 'Metadata(tags: $tags)';
-}
-
-
+  @override
+  String toString() {
+    return 'Metadata(tags: $tags)';
+  }
 }
 
 /// @nodoc
-abstract mixin class _$MetadataCopyWith<$Res> implements $MetadataCopyWith<$Res> {
-  factory _$MetadataCopyWith(_Metadata value, $Res Function(_Metadata) _then) = __$MetadataCopyWithImpl;
-@override @useResult
-$Res call({
- List<dynamic>? tags
-});
-
-
-
-
+abstract mixin class _$MetadataCopyWith<$Res>
+    implements $MetadataCopyWith<$Res> {
+  factory _$MetadataCopyWith(_Metadata value, $Res Function(_Metadata) _then) =
+      __$MetadataCopyWithImpl;
+  @override
+  @useResult
+  $Res call({List<dynamic>? tags});
 }
+
 /// @nodoc
-class __$MetadataCopyWithImpl<$Res>
-    implements _$MetadataCopyWith<$Res> {
+class __$MetadataCopyWithImpl<$Res> implements _$MetadataCopyWith<$Res> {
   __$MetadataCopyWithImpl(this._self, this._then);
 
   final _Metadata _self;
   final $Res Function(_Metadata) _then;
 
-/// Create a copy of Metadata
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? tags = freezed,}) {
-  return _then(_Metadata(
-tags: freezed == tags ? _self._tags : tags // ignore: cast_nullable_to_non_nullable
-as List<dynamic>?,
-  ));
-}
-
-
+  /// Create a copy of Metadata
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? tags = freezed,
+  }) {
+    return _then(_Metadata(
+      tags: freezed == tags
+          ? _self._tags
+          : tags // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
+    ));
+  }
 }
 
 // dart format on

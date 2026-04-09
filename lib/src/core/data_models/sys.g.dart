@@ -7,16 +7,17 @@ part of 'sys.dart';
 // **************************************************************************
 
 _Sys _$SysFromJson(Map<String, dynamic> json) => _Sys(
-  type: $enumDecodeNullable(_$ContentfulItemTypeEnumMap, json['type']),
-  linkType: $enumDecodeNullable(_$ContentfulLinkTypeEnumMap, json['linkType']),
-  id: json['id'] as String?,
-);
+      type: $enumDecodeNullable(_$ContentfulItemTypeEnumMap, json['type']),
+      linkType:
+          $enumDecodeNullable(_$ContentfulLinkTypeEnumMap, json['linkType']),
+      id: json['id'] as String?,
+    );
 
 Map<String, dynamic> _$SysToJson(_Sys instance) => <String, dynamic>{
-  'type': _$ContentfulItemTypeEnumMap[instance.type],
-  'linkType': _$ContentfulLinkTypeEnumMap[instance.linkType],
-  'id': instance.id,
-};
+      'type': _$ContentfulItemTypeEnumMap[instance.type],
+      'linkType': _$ContentfulLinkTypeEnumMap[instance.linkType],
+      'id': instance.id,
+    };
 
 const _$ContentfulItemTypeEnumMap = {
   ContentfulItemType.entry: 'Entry',

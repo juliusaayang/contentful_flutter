@@ -14,270 +14,335 @@ T _$identity<T>(T value) => value;
 
 /// @nodoc
 mixin _$Sys {
+  ContentfulItemType? get type;
+  ContentfulLinkType? get linkType;
+  String? get id;
 
- ContentfulItemType? get type; ContentfulLinkType? get linkType; String? get id;
-/// Create a copy of Sys
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$SysCopyWith<Sys> get copyWith => _$SysCopyWithImpl<Sys>(this as Sys, _$identity);
+  /// Create a copy of Sys
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SysCopyWith<Sys> get copyWith =>
+      _$SysCopyWithImpl<Sys>(this as Sys, _$identity);
 
   /// Serializes this Sys to a JSON map.
   Map<String, dynamic> toJson();
 
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Sys &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.linkType, linkType) ||
+                other.linkType == linkType) &&
+            (identical(other.id, id) || other.id == id));
+  }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Sys&&(identical(other.type, type) || other.type == type)&&(identical(other.linkType, linkType) || other.linkType == linkType)&&(identical(other.id, id) || other.id == id));
-}
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, type, linkType, id);
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,type,linkType,id);
-
-@override
-String toString() {
-  return 'Sys(type: $type, linkType: $linkType, id: $id)';
-}
-
-
+  @override
+  String toString() {
+    return 'Sys(type: $type, linkType: $linkType, id: $id)';
+  }
 }
 
 /// @nodoc
-abstract mixin class $SysCopyWith<$Res>  {
+abstract mixin class $SysCopyWith<$Res> {
   factory $SysCopyWith(Sys value, $Res Function(Sys) _then) = _$SysCopyWithImpl;
-@useResult
-$Res call({
- ContentfulItemType? type, ContentfulLinkType? linkType, String? id
-});
-
-
-
-
+  @useResult
+  $Res call(
+      {ContentfulItemType? type, ContentfulLinkType? linkType, String? id});
 }
+
 /// @nodoc
-class _$SysCopyWithImpl<$Res>
-    implements $SysCopyWith<$Res> {
+class _$SysCopyWithImpl<$Res> implements $SysCopyWith<$Res> {
   _$SysCopyWithImpl(this._self, this._then);
 
   final Sys _self;
   final $Res Function(Sys) _then;
 
-/// Create a copy of Sys
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? type = freezed,Object? linkType = freezed,Object? id = freezed,}) {
-  return _then(_self.copyWith(
-type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as ContentfulItemType?,linkType: freezed == linkType ? _self.linkType : linkType // ignore: cast_nullable_to_non_nullable
-as ContentfulLinkType?,id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of Sys
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = freezed,
+    Object? linkType = freezed,
+    Object? id = freezed,
+  }) {
+    return _then(_self.copyWith(
+      type: freezed == type
+          ? _self.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as ContentfulItemType?,
+      linkType: freezed == linkType
+          ? _self.linkType
+          : linkType // ignore: cast_nullable_to_non_nullable
+              as ContentfulLinkType?,
+      id: freezed == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
 }
-
-}
-
 
 /// Adds pattern-matching-related methods to [Sys].
 extension SysPatterns on Sys {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Sys value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _Sys() when $default != null:
-return $default(_that);case _:
-  return orElse();
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Sys value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Sys() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
 
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Sys value)  $default,){
-final _that = this;
-switch (_that) {
-case _Sys():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_Sys value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Sys():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
 
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Sys value)?  $default,){
-final _that = this;
-switch (_that) {
-case _Sys() when $default != null:
-return $default(_that);case _:
-  return null;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_Sys value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Sys() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
 
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( ContentfulItemType? type,  ContentfulLinkType? linkType,  String? id)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _Sys() when $default != null:
-return $default(_that.type,_that.linkType,_that.id);case _:
-  return orElse();
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            ContentfulItemType? type, ContentfulLinkType? linkType, String? id)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Sys() when $default != null:
+        return $default(_that.type, _that.linkType, _that.id);
+      case _:
+        return orElse();
+    }
+  }
 
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( ContentfulItemType? type,  ContentfulLinkType? linkType,  String? id)  $default,) {final _that = this;
-switch (_that) {
-case _Sys():
-return $default(_that.type,_that.linkType,_that.id);case _:
-  throw StateError('Unexpected subclass');
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            ContentfulItemType? type, ContentfulLinkType? linkType, String? id)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Sys():
+        return $default(_that.type, _that.linkType, _that.id);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
 
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( ContentfulItemType? type,  ContentfulLinkType? linkType,  String? id)?  $default,) {final _that = this;
-switch (_that) {
-case _Sys() when $default != null:
-return $default(_that.type,_that.linkType,_that.id);case _:
-  return null;
-
-}
-}
-
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            ContentfulItemType? type, ContentfulLinkType? linkType, String? id)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Sys() when $default != null:
+        return $default(_that.type, _that.linkType, _that.id);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
-
 class _Sys implements Sys {
   const _Sys({this.type, this.linkType, this.id});
   factory _Sys.fromJson(Map<String, dynamic> json) => _$SysFromJson(json);
 
-@override final  ContentfulItemType? type;
-@override final  ContentfulLinkType? linkType;
-@override final  String? id;
+  @override
+  final ContentfulItemType? type;
+  @override
+  final ContentfulLinkType? linkType;
+  @override
+  final String? id;
 
-/// Create a copy of Sys
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$SysCopyWith<_Sys> get copyWith => __$SysCopyWithImpl<_Sys>(this, _$identity);
+  /// Create a copy of Sys
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$SysCopyWith<_Sys> get copyWith =>
+      __$SysCopyWithImpl<_Sys>(this, _$identity);
 
-@override
-Map<String, dynamic> toJson() {
-  return _$SysToJson(this, );
-}
+  @override
+  Map<String, dynamic> toJson() {
+    return _$SysToJson(
+      this,
+    );
+  }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Sys&&(identical(other.type, type) || other.type == type)&&(identical(other.linkType, linkType) || other.linkType == linkType)&&(identical(other.id, id) || other.id == id));
-}
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _Sys &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.linkType, linkType) ||
+                other.linkType == linkType) &&
+            (identical(other.id, id) || other.id == id));
+  }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,type,linkType,id);
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, type, linkType, id);
 
-@override
-String toString() {
-  return 'Sys(type: $type, linkType: $linkType, id: $id)';
-}
-
-
+  @override
+  String toString() {
+    return 'Sys(type: $type, linkType: $linkType, id: $id)';
+  }
 }
 
 /// @nodoc
 abstract mixin class _$SysCopyWith<$Res> implements $SysCopyWith<$Res> {
-  factory _$SysCopyWith(_Sys value, $Res Function(_Sys) _then) = __$SysCopyWithImpl;
-@override @useResult
-$Res call({
- ContentfulItemType? type, ContentfulLinkType? linkType, String? id
-});
-
-
-
-
+  factory _$SysCopyWith(_Sys value, $Res Function(_Sys) _then) =
+      __$SysCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {ContentfulItemType? type, ContentfulLinkType? linkType, String? id});
 }
+
 /// @nodoc
-class __$SysCopyWithImpl<$Res>
-    implements _$SysCopyWith<$Res> {
+class __$SysCopyWithImpl<$Res> implements _$SysCopyWith<$Res> {
   __$SysCopyWithImpl(this._self, this._then);
 
   final _Sys _self;
   final $Res Function(_Sys) _then;
 
-/// Create a copy of Sys
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? type = freezed,Object? linkType = freezed,Object? id = freezed,}) {
-  return _then(_Sys(
-type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as ContentfulItemType?,linkType: freezed == linkType ? _self.linkType : linkType // ignore: cast_nullable_to_non_nullable
-as ContentfulLinkType?,id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
+  /// Create a copy of Sys
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? type = freezed,
+    Object? linkType = freezed,
+    Object? id = freezed,
+  }) {
+    return _then(_Sys(
+      type: freezed == type
+          ? _self.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as ContentfulItemType?,
+      linkType: freezed == linkType
+          ? _self.linkType
+          : linkType // ignore: cast_nullable_to_non_nullable
+              as ContentfulLinkType?,
+      id: freezed == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
 }
 
 // dart format on

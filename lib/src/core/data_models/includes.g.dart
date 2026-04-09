@@ -7,11 +7,11 @@ part of 'includes.dart';
 // **************************************************************************
 
 _Includes _$IncludesFromJson(Map<String, dynamic> json) => _Includes(
-  assetList: (json['Asset'] as List<dynamic>?)
-      ?.map((e) => Asset.fromJson(e as Map<String, dynamic>))
-      .toList(),
-);
+      assetList: (json['Asset'] as List<dynamic>?)
+          ?.map((e) => Asset.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
 Map<String, dynamic> _$IncludesToJson(_Includes instance) => <String, dynamic>{
-  'Asset': instance.assetList,
-};
+      'Asset': instance.assetList,
+    };

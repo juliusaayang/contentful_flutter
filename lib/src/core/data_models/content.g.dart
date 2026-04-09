@@ -7,31 +7,31 @@ part of 'content.dart';
 // **************************************************************************
 
 _Content _$ContentFromJson(Map<String, dynamic> json) => _Content(
-  nodeType: $enumDecode(_$ContentfulContentNodeTypeEnumMap, json['nodeType']),
-  parentNodeType: $enumDecodeNullable(
-    _$ContentfulContentNodeTypeEnumMap,
-    json['parentNodeType'],
-  ),
-  data: json['data'] == null
-      ? null
-      : Data.fromJson(json['data'] as Map<String, dynamic>),
-  subContent: (json['content'] as List<dynamic>?)
-      ?.map((e) => Content.fromJson(e as Map<String, dynamic>))
-      .toList(),
-  marks: (json['marks'] as List<dynamic>?)
-      ?.map((e) => ContentfulTextMark.fromJson(e as Map<String, dynamic>))
-      .toList(),
-  value: json['value'] as String?,
-);
+      nodeType:
+          $enumDecode(_$ContentfulContentNodeTypeEnumMap, json['nodeType']),
+      parentNodeType: $enumDecodeNullable(
+          _$ContentfulContentNodeTypeEnumMap, json['parentNodeType']),
+      data: json['data'] == null
+          ? null
+          : Data.fromJson(json['data'] as Map<String, dynamic>),
+      subContent: (json['content'] as List<dynamic>?)
+          ?.map((e) => Content.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      marks: (json['marks'] as List<dynamic>?)
+          ?.map((e) => ContentfulTextMark.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      value: json['value'] as String?,
+    );
 
 Map<String, dynamic> _$ContentToJson(_Content instance) => <String, dynamic>{
-  'nodeType': _$ContentfulContentNodeTypeEnumMap[instance.nodeType]!,
-  'parentNodeType': _$ContentfulContentNodeTypeEnumMap[instance.parentNodeType],
-  'data': instance.data,
-  'content': instance.subContent,
-  'marks': instance.marks,
-  'value': instance.value,
-};
+      'nodeType': _$ContentfulContentNodeTypeEnumMap[instance.nodeType]!,
+      'parentNodeType':
+          _$ContentfulContentNodeTypeEnumMap[instance.parentNodeType],
+      'data': instance.data,
+      'content': instance.subContent,
+      'marks': instance.marks,
+      'value': instance.value,
+    };
 
 const _$ContentfulContentNodeTypeEnumMap = {
   ContentfulContentNodeType.unorderedList: 'unordered-list',
